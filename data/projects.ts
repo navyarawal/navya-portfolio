@@ -191,22 +191,17 @@ export const projects: Project[] = [
       "Technical education",
     ],
     gallery: [
-      // EDIT: add to /public/images/rookie-robotics/ — school photos,
-      // student and program photos, equipment deployment, workshops, press/award images.
       {
-        src: "/images/rookie-robotics/placeholder-1.svg",
-        alt: "Rookie Robotics classroom placeholder",
-        isPlaceholder: true,
+        src: "/images/rookie-robotics/IMG_0518.jpg",
+        alt: "Navya teaching a group of students at a Rookie Robotics workshop in Nepal",
       },
       {
-        src: "/images/rookie-robotics/placeholder-2.svg",
-        alt: "Rookie Robotics equipment deployment placeholder",
-        isPlaceholder: true,
+        src: "/images/rookie-robotics/IMG_3522.jpg",
+        alt: "Navya walking students through robotics kit components during a classroom session",
       },
       {
-        src: "/images/rookie-robotics/placeholder-3.svg",
-        alt: "Rookie Robotics workshop placeholder",
-        isPlaceholder: true,
+        src: "/images/rookie-robotics/IMG_0563.jpg",
+        alt: "Students proudly showing off the robot they built together",
       },
     ],
     documents: [],
