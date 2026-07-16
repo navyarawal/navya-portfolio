@@ -1,4 +1,4 @@
-import { Mail, ArrowDown } from "lucide-react";
+import { Mail } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { LinkedinMark } from "@/components/ui/icons";
 import { site } from "@/data/site";
@@ -62,15 +62,6 @@ export function Hero() {
           </div>
         </div>
       </div>
-
-      <a
-        href="#work"
-        className="hidden sm:flex absolute bottom-8 left-1/2 -translate-x-1/2 flex-col items-center gap-2 text-ink-soft hover:text-ink transition-colors"
-        aria-label="Scroll to Selected Work"
-      >
-        <span className="text-[10px] font-semibold uppercase tracking-[0.2em]">Scroll</span>
-        <ArrowDown size={16} className="animate-bounce motion-reduce:animate-none" />
-      </a>
     </section>
   );
 }

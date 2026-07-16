@@ -4,12 +4,14 @@ const accentText: Record<Accent, string> = {
   cobalt: "text-blue",
   red: "text-coral",
   gold: "text-amber",
+  green: "text-green",
 };
 
 const accentBg: Record<Accent, string> = {
   cobalt: "bg-blue-tint",
   red: "bg-coral-tint",
   gold: "bg-amber-tint",
+  green: "bg-green-tint",
 };
 
 export function SectionHeading({

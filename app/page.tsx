@@ -5,10 +5,12 @@ import { Experience } from "@/components/experience/Experience";
 import { Leadership } from "@/components/leadership/Leadership";
 import { Capabilities } from "@/components/capabilities/Capabilities";
 import { Contact } from "@/components/contact/Contact";
+import { BackgroundLines } from "@/components/ui/BackgroundLines";
 
 export default function Home() {
   return (
-    <>
+    <div className="relative">
+      <BackgroundLines />
       <Nav />
       <main id="main">
         <Hero />
@@ -18,6 +20,6 @@ export default function Home() {
         <Capabilities />
       </main>
       <Contact />
-    </>
+    </div>
   );
 }

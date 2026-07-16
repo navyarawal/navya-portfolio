@@ -4,12 +4,14 @@ const ACCENT_HEX: Record<Accent, string> = {
   cobalt: "#3d6bf6",
   red: "#ff6452",
   gold: "#ffab1f",
+  green: "#2fae66",
 };
 
 const ACCENT_TINT: Record<Accent, string> = {
   cobalt: "#e8edff",
   red: "#ffe9e4",
   gold: "#fff1d9",
+  green: "#e3f5ea",
 };
 
 function hashSeed(seed: string) {

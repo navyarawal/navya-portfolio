@@ -7,19 +7,21 @@ import { Contact } from "@/components/contact/Contact";
 import { Gallery } from "@/components/ui/Gallery";
 import { PdfCard } from "@/components/ui/PdfCard";
 import { CaseStudySection } from "@/components/work/CaseStudySection";
-import { projects, getProjectBySlug } from "@/data/projects";
+import { projects, getProjectBySlug, type Accent } from "@/data/projects";
 import { site } from "@/data/site";
 
-const accentText: Record<string, string> = {
+const accentText: Record<Accent, string> = {
   cobalt: "text-blue",
   red: "text-coral",
   gold: "text-amber",
+  green: "text-green",
 };
 
-const accentTint: Record<string, string> = {
+const accentTint: Record<Accent, string> = {
   cobalt: "bg-blue-tint",
   red: "bg-coral-tint",
   gold: "bg-amber-tint",
+  green: "bg-green-tint",
 };
 
 export function generateStaticParams() {

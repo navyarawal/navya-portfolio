@@ -6,6 +6,7 @@ const accentText: Record<Project["accent"], string> = {
   cobalt: "text-blue",
   red: "text-coral",
   gold: "text-amber",
+  green: "text-green",
 };
 
 export function ProjectCompact({ project }: { project: Project }) {

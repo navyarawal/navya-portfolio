@@ -14,6 +14,8 @@
   --color-coral-tint: #ffe9e4;
   --color-amber: #ffab1f;
   --color-amber-tint: #fff1d9;
+  --color-green: #2fae66;
+  --color-green-tint: #e3f5ea;
 
   --font-sans: var(--font-jakarta);
 
@@ -41,6 +43,8 @@
   --color-coral-tint: var(--color-coral-tint);
   --color-amber: var(--color-amber);
   --color-amber-tint: var(--color-amber-tint);
+  --color-green: var(--color-green);
+  --color-green-tint: var(--color-green-tint);
 
   --font-sans: var(--font-sans);
 

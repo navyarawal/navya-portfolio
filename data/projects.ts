@@ -2,7 +2,7 @@
 // both read from this file. To change project order, edit `order`.
 // To feature/unfeature a project on the homepage, edit `featured`.
 
-export type Accent = "cobalt" | "red" | "gold";
+export type Accent = "cobalt" | "red" | "gold" | "green";
 
 export interface GalleryImage {
   // EDIT: drop the real file in the matching /public/images/<slug>/ folder,
@@ -233,7 +233,7 @@ export const projects: Project[] = [
     category: "Environmental Engineering & Hardware",
     role: "Lead Hardware Developer",
     dates: "August 2024 — June 2025",
-    accent: "cobalt",
+    accent: "green",
     featured: true,
     order: 4,
     summary:
@@ -295,7 +295,7 @@ export const projects: Project[] = [
     category: "Artificial Intelligence & Environment",
     role: "Lead Software Developer",
     dates: "June 2023 — August 2024",
-    accent: "cobalt",
+    accent: "green",
     featured: false,
     order: 5,
     summary:

@@ -8,24 +8,28 @@ const accentText: Record<Project["accent"], string> = {
   cobalt: "text-blue",
   red: "text-coral",
   gold: "text-amber",
+  green: "text-green",
 };
 
 const accentBg: Record<Project["accent"], string> = {
   cobalt: "bg-blue",
   red: "bg-coral",
   gold: "bg-amber",
+  green: "bg-green",
 };
 
 const accentTint: Record<Project["accent"], string> = {
   cobalt: "bg-blue-tint",
   red: "bg-coral-tint",
   gold: "bg-amber-tint",
+  green: "bg-green-tint",
 };
 
 const cardTint: Record<Project["accent"], string> = {
   cobalt: "bg-blue-tint/60",
   red: "bg-coral-tint/60",
   gold: "bg-amber-tint/60",
+  green: "bg-green-tint/60",
 };
 
 function Meta({ project }: { project: Project }) {

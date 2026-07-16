@@ -5,8 +5,8 @@ import { motion, useInView } from "framer-motion";
 import { usePrefersReducedMotion } from "@/lib/hooks";
 import type { ImpactStat } from "@/data/leadership";
 
-const TINTS = ["bg-blue-tint", "bg-coral-tint", "bg-amber-tint"];
-const TEXTS = ["text-blue", "text-coral", "text-amber"];
+const TINTS = ["bg-blue-tint", "bg-coral-tint", "bg-amber-tint", "bg-green-tint"];
+const TEXTS = ["text-blue", "text-coral", "text-amber", "text-green"];
 
 function parseValue(value: string) {
   const match = value.match(/([\d.]+)/);
