@@ -1,4 +1,4 @@
-// Centralized project data — homepage "Selected Work" and case study pages
+// Centralized project data — homepage "The Work" section and case study pages
 // both read from this file. To change project order, edit `order`.
 // To feature/unfeature a project on the homepage, edit `featured`.
 

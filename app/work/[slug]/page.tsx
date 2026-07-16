@@ -71,7 +71,7 @@ export default async function CaseStudyPage({
               className="inline-flex items-center gap-1.5 text-xs font-semibold text-ink-soft hover:text-ink mb-10"
             >
               <ArrowLeft size={14} aria-hidden="true" />
-              Back to Selected Work
+              Back to The Work
             </Link>
 
             <header className="flex flex-col gap-6 max-w-4xl">

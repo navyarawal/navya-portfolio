@@ -13,7 +13,8 @@
       "Bash(python3 -c ' *)",
       "Bash(npx eslint *)",
       "Bash(git init *)",
-      "Bash(git add *)"
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)"
     ]
   }
 }

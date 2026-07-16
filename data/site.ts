@@ -23,7 +23,7 @@ export const site = {
 
 export const navLinks = [
   { label: "Home", href: "#home" },
-  { label: "Selected Work", href: "#work" },
+  { label: "The Work", href: "#work" },
   { label: "Leadership & Impact", href: "#leadership" },
   { label: "Experience", href: "#experience" },
   { label: "Capabilities", href: "#capabilities" },

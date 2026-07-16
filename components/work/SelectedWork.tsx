@@ -8,7 +8,7 @@ export function SelectedWork() {
     <section id="work" className="py-20 sm:py-28 scroll-mt-24">
       <div className="container-edit">
         <SectionHeading
-          eyebrow="Selected Work"
+          eyebrow="The Work"
           title="Four projects, four different ways I've turned an idea into something real."
           description="A concise selection spanning product, research, hardware, and community-scale programs — each with a full case study if you want to go deeper."
           accent="cobalt"

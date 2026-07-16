@@ -10,6 +10,7 @@ interface Size {
 const BLUE = "#3d6bf6";
 const CORAL = "#ff6452";
 const AMBER = "#ffab1f";
+const GREEN = "#2fae66";
 
 // Sharp, right-angled trace with occasional small square "grid" detours —
 // the architectural line.
@@ -78,6 +79,28 @@ function buildOrbitalPath(x: number, height: number) {
   return { d, loops };
 }
 
+// A tight, continuous zigzag — the fourth line's distinct sharp-turn
+// character, denser and narrower than the architectural line's jogs.
+function buildZigzagPath(x: number, height: number) {
+  let d = `M${x},0`;
+  let curY = 0;
+  let curX = x;
+  let dir = 1;
+  let i = 0;
+  while (curY < height) {
+    curY = Math.min(curY + 85, height);
+    curX = x + dir * 17;
+    d += ` L${curX},${curY}`;
+    dir *= -1;
+    if (i % 5 === 4 && curY < height - 60) {
+      curY = Math.min(curY + 55, height);
+      d += ` L${curX},${curY}`;
+    }
+    i++;
+  }
+  return d;
+}
+
 // Ambient background graphic: a small set of thin geometric lines that
 // travel the full height of the page, mostly hidden behind each section's
 // opaque card background and visible in the gaps/margins between them — a
@@ -120,6 +143,7 @@ export function BackgroundLines() {
   const architectural = buildArchitecturalPath(52, size.height);
   const flowing = buildFlowingPath(92, size.height);
   const orbital = buildOrbitalPath(134, size.height);
+  const zigzag = buildZigzagPath(178, size.height);
 
   return (
     // No z-index: rendering this before the page content in the DOM is
@@ -155,6 +179,14 @@ export function BackgroundLines() {
           strokeWidth={1.75}
         />
       ))}
+      <path
+        d={zigzag}
+        fill="none"
+        stroke={GREEN}
+        strokeOpacity={0.2}
+        strokeWidth={1.75}
+        strokeLinecap="round"
+      />
     </svg>
   );
 }

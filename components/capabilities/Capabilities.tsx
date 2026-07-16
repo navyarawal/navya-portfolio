@@ -47,11 +47,11 @@ export function Capabilities() {
               </div>
             );
           })}
-          <div className="bg-green rounded-2xl p-5 flex flex-col justify-between gap-4">
-            <span className="text-4xl font-extrabold text-paper/25" aria-hidden="true">
+          <div className="bg-green-tint rounded-2xl p-5 flex flex-col justify-between gap-4">
+            <span className="text-4xl font-extrabold text-green/30" aria-hidden="true">
               +
             </span>
-            <p className="text-sm font-semibold text-paper leading-snug">
+            <p className="text-sm font-semibold text-ink leading-snug">
               This list grows with every new project — not a fixed checklist.
             </p>
           </div>
