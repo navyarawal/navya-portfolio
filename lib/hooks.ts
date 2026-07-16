@@ -23,17 +23,24 @@ export function usePrefersReducedMotion() {
 }
 
 export function useScrollSpy(ids: string[], offset = 160) {
-  const [active, setActive] = useState(ids[0] ?? "");
+  const [active, setActive] = useState("");
 
   useEffect(() => {
     const handler = () => {
-      let current = ids[0] ?? "";
+      // Only default to the first id once we've confirmed at least one of
+      // the target sections actually exists on this page — otherwise (e.g.
+      // on a case study route, which has none of these ids) nothing should
+      // read as "active" in the nav.
+      let current = "";
+      let anyFound = false;
       for (const id of ids) {
         const el = document.getElementById(id);
         if (!el) continue;
+        anyFound = true;
         const top = el.getBoundingClientRect().top;
         if (top - offset <= 0) current = id;
       }
+      if (anyFound && !current) current = ids[0] ?? "";
       setActive(current);
     };
     handler();

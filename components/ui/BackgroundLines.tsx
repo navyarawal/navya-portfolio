@@ -151,7 +151,9 @@ export function BackgroundLines() {
     // explicit z-index would pull it out of that natural paint order.
     <svg
       aria-hidden="true"
-      className="absolute inset-0 pointer-events-none"
+      // Hidden below lg: at narrow widths the lanes (x ≈ 50-195px) run
+      // straight through the hero text instead of sitting in the margins.
+      className="absolute inset-0 pointer-events-none hidden lg:block"
       width={size.width}
       height={size.height}
       viewBox={`0 0 ${size.width} ${size.height}`}

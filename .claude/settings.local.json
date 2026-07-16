@@ -14,7 +14,10 @@
       "Bash(npx eslint *)",
       "Bash(git init *)",
       "Bash(git add *)",
-      "Bash(git commit -m ' *)"
+      "Bash(git commit -m ' *)",
+      "Bash(curl -s http://localhost:3000/work/sunny)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" http://localhost:3000/opengraph-image)",
+      "Bash(curl -s http://localhost:3000)"
     ]
   }
 }

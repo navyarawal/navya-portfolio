@@ -63,7 +63,7 @@ export const projects: Project[] = [
     title: "Sunny",
     category: "Product & Entrepreneurship",
     role: "Co-Founder",
-    dates: "May 2026 — Present",
+    dates: "March 2026 — June 2026",
     accent: "gold",
     featured: true,
     order: 1,

@@ -1,4 +1,5 @@
 import { ImageResponse } from "next/og";
+import { site } from "@/data/site";
 
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
@@ -110,8 +111,7 @@ export default function OpengraphImage() {
               maxWidth: 900,
             }}
           >
-            I build at the intersection of AI, data, robotics &amp; real-world
-            impact.
+            {site.heroLine}
           </div>
         </div>
       </div>

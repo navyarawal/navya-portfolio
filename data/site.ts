@@ -5,7 +5,7 @@ export const site = {
   name: "Navya Rawal",
   tagline: "Math + Computer Science, UCLA",
   // Short, punchy hero line — shown big on the homepage. Keep it tight.
-  heroLine: "I build products that leave the lab and ideas that outgrow my computer.",
+  heroLine: "I build products that leave the lab and my ideas outgrow my computer.",
   positioning:
     "I'm a Math and Computer Science student building at the intersection of AI, data, robotics, and meaningful real-world impact.",
   description:
