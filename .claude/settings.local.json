@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx --yes create-next-app@latest . --typescript --tailwind --eslint --app --src-dir=false --import-alias \"@/*\" --use-npm --turbopack --skip-install)",
+      "Bash(npx --yes create-next-app@latest /private/tmp/claude-501/-Users-navyarawal-Personal-Website-OG/9b8f6539-aa91-4b52-afb2-ea3efbaf3a17/scratchpad/scaffold --typescript --tailwind --eslint --app --src-dir=false --import-alias \"@/*\" --use-npm --turbopack)",
+      "Bash(cd \"/Users/navyarawal/Personal Website OG\" && rm -f public/*.svg && cat tsconfig.json)",
+      "Bash(npm install *)",
+      "Bash(python3 -)",
+      "Bash(npx tsc *)",
+      "Bash(node -e \"const icons = require\\('lucide-react'\\); console.log\\(Object.keys\\(icons\\).length\\)\")",
+      "Bash(node -e \"const icons = require\\('lucide-react'\\); console.log\\(Object.keys\\(icons\\).filter\\(k => /mail|send|expand|download|arrow|chevron|menu|^x$|eye/i.test\\(k\\)\\)\\)\")",
+      "Bash(npm run *)",
+      "Bash(python3 -c ' *)",
+      "Bash(npx eslint *)",
+      "Bash(git init *)",
+      "Bash(git add *)"
+    ]
+  }
+}

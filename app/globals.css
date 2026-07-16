@@ -1,0 +1,130 @@
+@import "tailwindcss";
+
+:root {
+  --color-paper: #fdfcf9;
+  --color-surface: #ffffff;
+  --color-tint: #f6f4ee;
+  --color-ink: #29262f;
+  --color-ink-soft: #6f6b78;
+  --color-line: #ece8de;
+
+  --color-blue: #3d6bf6;
+  --color-blue-tint: #e8edff;
+  --color-coral: #ff6452;
+  --color-coral-tint: #ffe9e4;
+  --color-amber: #ffab1f;
+  --color-amber-tint: #fff1d9;
+
+  --font-sans: var(--font-jakarta);
+
+  --container-max: 1400px;
+
+  --radius-sm: 14px;
+  --radius-md: 22px;
+  --radius-lg: 32px;
+
+  --shadow-soft: 0 2px 8px rgba(41, 38, 47, 0.04), 0 12px 32px rgba(41, 38, 47, 0.06);
+  --shadow-lift: 0 4px 14px rgba(41, 38, 47, 0.07), 0 20px 44px rgba(41, 38, 47, 0.09);
+}
+
+@theme inline {
+  --color-paper: var(--color-paper);
+  --color-surface: var(--color-surface);
+  --color-tint: var(--color-tint);
+  --color-ink: var(--color-ink);
+  --color-ink-soft: var(--color-ink-soft);
+  --color-line: var(--color-line);
+
+  --color-blue: var(--color-blue);
+  --color-blue-tint: var(--color-blue-tint);
+  --color-coral: var(--color-coral);
+  --color-coral-tint: var(--color-coral-tint);
+  --color-amber: var(--color-amber);
+  --color-amber-tint: var(--color-amber-tint);
+
+  --font-sans: var(--font-sans);
+
+  --breakpoint-xs: 420px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  background: var(--color-paper);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-sans), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--color-blue);
+  color: white;
+}
+
+:focus-visible {
+  outline: 3px solid var(--color-blue);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+.container-edit {
+  max-width: var(--container-max);
+  margin-inline: auto;
+  padding-inline: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .container-edit {
+    padding-inline: 3rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container-edit {
+    padding-inline: 4.5rem;
+  }
+}
+
+.shadow-soft {
+  box-shadow: var(--shadow-soft);
+}
+
+.shadow-lift {
+  box-shadow: var(--shadow-lift);
+}
+
+/* Curved seam between two stacked sections — used instead of a hard line so
+   sections read as one continuous page rather than stacked blocks. */
+.seam {
+  display: block;
+  width: 100%;
+  height: 64px;
+  margin-bottom: -1px;
+}
+
+@media (min-width: 768px) {
+  .seam {
+    height: 96px;
+  }
+}
