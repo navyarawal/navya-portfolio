@@ -81,22 +81,17 @@ export const projects: Project[] = [
       "Founder-led growth",
     ],
     gallery: [
-      // EDIT: add to /public/images/sunny/ — product screenshots, branding,
-      // launch photos, user-testing photos, NFC demos, promo materials.
       {
-        src: "/images/sunny/placeholder-1.svg",
-        alt: "Sunny product screenshot placeholder",
-        isPlaceholder: true,
+        src: "/images/sunny/product-promo.jpeg",
+        alt: "Sunny app promo graphic: 'POV: your alarm finally fights back' with app screenshot showing streak tracking",
       },
       {
-        src: "/images/sunny/placeholder-2.svg",
-        alt: "Sunny NFC tag interaction placeholder",
-        isPlaceholder: true,
+        src: "/images/sunny/nfc-tags.jpg",
+        alt: "Sunny NFC tag stickers, printed with a smiling sun design",
       },
       {
-        src: "/images/sunny/placeholder-3.svg",
-        alt: "Sunny campus launch placeholder",
-        isPlaceholder: true,
+        src: "/images/sunny/campus-launch.jpg",
+        alt: "Sunny campus launch table with NFC tags, a phone showing the onboarding flow, and promo cards",
       },
     ],
     documents: [],
@@ -148,8 +143,10 @@ export const projects: Project[] = [
       },
     ],
     documents: [
-      // EDIT: add research paper / poster PDF to /public/documents/ and
-      // reference it here, e.g. { label: "Research Paper", href: "/documents/osteosarcoma-cnn.pdf" }
+      {
+        label: "Research Paper",
+        href: "/documents/osteosarcoma-cnn/osteosarcoma-research-paper.pdf",
+      },
     ],
     links: [],
     caseStudy: {
@@ -223,8 +220,8 @@ export const projects: Project[] = [
     },
   },
   {
-    slug: "phosphody",
-    title: "Phosphody",
+    slug: "phosphobuddy",
+    title: "PhosphoBuddy",
     category: "Environmental Engineering & Hardware",
     role: "Lead Hardware Developer",
     dates: "August 2024 — June 2025",
@@ -246,33 +243,27 @@ export const projects: Project[] = [
       "Competition & pitch presentation",
     ],
     gallery: [
-      // EDIT: add to /public/images/phosphody/ — prototype images, system
-      // diagrams, testing photos, competition photos, results graphics.
       {
-        src: "/images/phosphody/placeholder-1.svg",
-        alt: "Phosphody prototype placeholder",
-        isPlaceholder: true,
+        src: "/images/phosphobuddy/dsrsd-award-ceremony.png",
+        alt: "PhosphoBuddy team receiving recognition at the Dublin San Ramon Services District, standing beside their science fair board",
       },
       {
-        src: "/images/phosphody/placeholder-2.svg",
-        alt: "Phosphody system diagram placeholder",
-        isPlaceholder: true,
-      },
-      {
-        src: "/images/phosphody/placeholder-3.svg",
-        alt: "Phosphody competition placeholder",
-        isPlaceholder: true,
+        src: "/images/phosphobuddy/berkeley-competition-1st-place.jpg",
+        alt: "Team accepting the 1st place award on stage at the UC Berkeley Bioengineering Competition",
       },
     ],
     documents: [
-      // EDIT: add technical report/paper to /public/documents/ and reference here.
+      {
+        label: "Research Week Presentation Poster",
+        href: "/documents/phosphobuddy/research-week-presentation-poster.pdf",
+      },
     ],
     links: [],
     caseStudy: {
       problem:
         "Excess phosphorus in wastewater drives harmful algal blooms and ecosystem damage — conventional filtration is often costly or chemically intensive.",
       role: "Lead Hardware Developer — system design, prototyping, and testing.",
-      team: EDIT_PLACEHOLDER,
+      team: "Team Dougherty B — Aarush De, Navya Rawal, Richa Tiwari, and Diya Rajaram, mentored by Darrence Tran and coached by Luis Huertas.",
       process:
         "Designed a three-tier biological filtration system combining duckweed, biochar, and bacteria, then built and tested prototypes to measure phosphorus removal before presenting the system in competition.",
       technicalApproach:

@@ -17,7 +17,23 @@
       "Bash(git commit -m ' *)",
       "Bash(curl -s http://localhost:3000/work/sunny)",
       "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" http://localhost:3000/opengraph-image)",
-      "Bash(curl -s http://localhost:3000)"
+      "Bash(curl -s http://localhost:3000)",
+      "Bash(git remote *)",
+      "Bash(git push *)",
+      "Bash(file *.jpg *.JPG)",
+      "mcp__visualize__read_me",
+      "Skill(artifact-design)",
+      "Skill(artifact-design:*)",
+      "Bash(which wkhtmltopdf *)",
+      "Bash(\"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome\" --headless --disable-gpu --no-pdf-header-footer --print-to-pdf=\"/Users/navyarawal/Downloads/Digital Logic Midterm Guide.pdf\" --print-to-pdf-no-header \"file:///private/tmp/claude-501/-Users-navyarawal-Personal-Website-OG/86b393f8-ea28-4260-ab85-5f5cd2db89c8/scratchpad/logic_design_guide.html\")",
+      "Bash(sips -s format jpeg \"00C5790B-7546-4544-BE75-4988FCE754B2.tiff\" --out preview-check.jpg)",
+      "Bash(set -e)",
+      "Bash(mkdir -p documents/phosphobuddy documents/osteosarcoma-cnn)",
+      "Bash(mv 'images/phosphobuddy/ResearchWeekyatPresentationPoster.pptx - Google Slides.pdf' documents/phosphobuddy/research-week-presentation-poster.pdf)",
+      "Bash(mv 'images/osteosarcoma-cnn/OsteoResearch \\(2\\).pdf' documents/osteosarcoma-cnn/osteosarcoma-research-paper.pdf)",
+      "Bash(rm -f .DS_Store)",
+      "Bash(mv IMG_2749.jpg nfc-tags.jpg)",
+      "Bash(mv IMG_2750.jpg campus-launch.jpg)"
     ]
   }
 }

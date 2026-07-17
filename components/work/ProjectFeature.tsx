@@ -188,7 +188,7 @@ export function ProjectFeature({ project, index }: { project: Project; index: nu
     );
   }
 
-  // variant === 3 — Phosphody — split diagram/results panel.
+  // variant === 3 — PhosphoBuddy — split diagram/results panel.
   return (
     <article className={`${card} grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-start`}>
       <div className="lg:col-span-6 flex flex-col gap-4">
