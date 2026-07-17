@@ -35,7 +35,8 @@ export function Contact() {
                 I&apos;m up for conversations about technical opportunities, AI
                 and data projects, early-stage startups, research
                 collaborations, product experimentation, and mission-driven
-                technology.
+                technology. I&apos;m always interested in thoughtful people,
+                difficult problems, and ideas worth building.
               </p>
 
               <div className="flex flex-wrap items-center gap-4 pt-2">
@@ -65,10 +66,6 @@ export function Contact() {
                 </a>
               </div>
 
-              <p className="text-sm text-ink-soft pt-8 max-w-md">
-                I&apos;m always interested in thoughtful people, difficult
-                problems, and ideas worth building.
-              </p>
             </div>
 
             <div className="lg:col-span-5 lg:pt-2">

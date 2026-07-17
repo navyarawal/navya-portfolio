@@ -24,6 +24,11 @@ export function Gallery({
 
   if (!items.length) return null;
 
+  // With a single item there's nothing to peek at the edge of — let it
+  // fill the available width instead of sitting at the multi-item size.
+  const itemWidth = items.length === 1 ? "w-full" : "w-[78%] xs:w-[64%] sm:w-[48%] md:w-[38%]";
+  const itemSizes = items.length === 1 ? "100vw" : "(max-width: 768px) 80vw, 40vw";
+
   const goTo = (i: number) => {
     const next = (i + items.length) % items.length;
     setIndex(next);
@@ -47,7 +52,7 @@ export function Gallery({
               href={item.documentHref}
               target="_blank"
               rel="noopener noreferrer"
-              className={`relative shrink-0 w-[78%] xs:w-[64%] sm:w-[48%] md:w-[38%] snap-start ${aspect} rounded-2xl overflow-hidden group focus-visible:outline-offset-4 shadow-soft`}
+              className={`relative shrink-0 ${itemWidth} snap-start ${aspect} rounded-2xl overflow-hidden group focus-visible:outline-offset-4 shadow-soft`}
               aria-label={`Open PDF: ${item.alt}`}
             >
               <Image
@@ -55,7 +60,7 @@ export function Gallery({
                 alt={item.alt}
                 fill
                 className="object-cover"
-                sizes="(max-width: 768px) 80vw, 40vw"
+                sizes={itemSizes}
               />
               <span className="absolute inset-0 bg-ink/0 group-hover:bg-ink/20 transition-colors" />
               <span className="absolute top-2.5 right-2.5 flex items-center gap-1 bg-ink/80 text-paper px-2.5 py-1.5 rounded-full text-xs font-semibold">
@@ -72,7 +77,7 @@ export function Gallery({
                 setIndex(i);
                 setLightboxOpen(true);
               }}
-              className={`relative shrink-0 w-[78%] xs:w-[64%] sm:w-[48%] md:w-[38%] snap-start ${aspect} rounded-2xl overflow-hidden group focus-visible:outline-offset-4 shadow-soft`}
+              className={`relative shrink-0 ${itemWidth} snap-start ${aspect} rounded-2xl overflow-hidden group focus-visible:outline-offset-4 shadow-soft`}
               aria-label={`Open image ${i + 1} of ${items.length}: ${item.alt}`}
             >
               {item.isPlaceholder ? (
@@ -83,7 +88,7 @@ export function Gallery({
                   alt={item.alt}
                   fill
                   className="object-cover"
-                  sizes="(max-width: 768px) 80vw, 40vw"
+                  sizes={itemSizes}
                 />
               )}
               <span className="absolute top-2.5 right-2.5 bg-ink/80 text-paper p-1.5 rounded-full opacity-0 group-hover:opacity-100 group-focus-visible:opacity-100 transition-opacity">
