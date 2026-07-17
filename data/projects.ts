@@ -99,8 +99,8 @@ export const projects: Project[] = [
     ],
     documents: [],
     links: [
-      { label: "Instagram", href: "https://instagram.com/sunnyalarm.app" },
-      { label: "Website", href: "https://sunnyalarm.com" },
+      { label: "Instagram", href: "https://www.instagram.com/sunnyalarm.app/" },
+      { label: "Website", href: "https://sunnyalarm.app" },
     ],
     caseStudy: {
       problem:
