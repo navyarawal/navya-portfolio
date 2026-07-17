@@ -27,7 +27,9 @@ export function Gallery({
   // With a single item there's nothing to peek at the edge of — let it
   // fill the available width instead of sitting at the multi-item size.
   const itemWidth = items.length === 1 ? "w-full" : "w-[78%] xs:w-[64%] sm:w-[48%] md:w-[38%]";
-  const itemSizes = items.length === 1 ? "100vw" : "(max-width: 768px) 80vw, 40vw";
+  // Single item spans the container (max 1400px minus padding), not the viewport.
+  const itemSizes =
+    items.length === 1 ? "(max-width: 1400px) 100vw, 1304px" : "(max-width: 768px) 80vw, 40vw";
 
   const goTo = (i: number) => {
     const next = (i + items.length) % items.length;
@@ -117,12 +119,13 @@ export function Gallery({
           >
             <ChevronRight size={16} />
           </button>
-          <div className="flex gap-1.5 ml-1" role="tablist" aria-label="Gallery position">
+          {/* Decorative position dots — purely visual; the arrows are the
+              controls and the "01 / 03" counter is the accessible status. */}
+          <div className="flex gap-1.5 ml-1" aria-hidden="true">
             {items.map((_, i) => (
               <span
                 key={i}
                 className={`h-1.5 w-1.5 rounded-full ${i === index ? "bg-ink" : "bg-line"}`}
-                aria-hidden="true"
               />
             ))}
           </div>
