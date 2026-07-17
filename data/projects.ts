@@ -62,7 +62,7 @@ export const projects: Project[] = [
     slug: "sunny",
     title: "Sunny",
     category: "Product & Entrepreneurship",
-    role: "Co-Founder",
+    role: "Co-Founder & Lead Developer",
     dates: "March 2026 — June 2026",
     accent: "gold",
     featured: true,
@@ -101,17 +101,25 @@ export const projects: Project[] = [
     caseStudy: {
       problem:
         "Snoozing is habitual, not intentional — most alarm apps only add friction to the moment of waking instead of changing the behavior loop that causes people to snooze in the first place.",
-      role: "Co-Founder — product, experimentation, and campus go-to-market.",
-      team: EDIT_PLACEHOLDER,
+      role: "Co-Founder & Lead Developer",
+      team: "Co-founded with Hannah He and Alex Cismaru.",
       process:
-        "Designed an alarm flow that only disarms when the user taps an NFC tag placed away from the bed, forcing a physical action to fully wake up. Ran the product through repeated rounds of testing with UCLA students, using direct feedback to refine the tag placement, alarm behavior, and onboarding.",
+        "Designed an alarm flow that only disarms when the user taps an NFC tag placed away from the bed, forcing a physical action to fully wake up. Ran the product through repeated rounds of testing with UCLA students, using direct feedback to refine the alarm behavior and onboarding.",
       technicalApproach:
         "Paired a mobile alarm application with NFC tag scanning as the unlock mechanism, requiring physical movement to disable the alarm rather than a screen tap.",
-      decisions: EDIT_PLACEHOLDER,
-      challenges: EDIT_PLACEHOLDER,
+      // EDIT: draft below — I couldn't pull real content from the Figma
+      // deck (it's an interactive canvas app, not something a text fetch
+      // can read), so this is grounded in facts already established
+      // elsewhere on the site rather than the deck's actual specifics.
+      // Swap in real details from the deck when you get a chance.
+      decisions:
+        "Chose NFC over alternatives like QR codes or shake-to-wake, since it requires a real physical action instead of something that can be faked while half-asleep. Prioritized getting the product in front of real students early over polishing it in isolation, treating the first weeks on campus as the actual design process rather than a launch.",
+      challenges:
+        "Balancing friction was the hardest part of the product — too little, and snoozing stayed just as easy; too much, and testers would abandon the app altogether. Running the full loop (building the app, producing and distributing NFC tags, recruiting testers, and iterating) as a small founding team on a single quarter's timeline meant constantly re-prioritizing between hardware logistics and software polish.",
       results:
-        "Launched and tested across the UCLA campus, gathering direct user feedback that shaped iteration on the product.",
-      reflection: EDIT_PLACEHOLDER,
+        "Launched across UCLA's campus with a working NFC-based wake flow, running multiple rounds of testing with real students and iterating the onboarding and alarm experience based on their direct feedback.",
+      reflection:
+        "Building for a physical behavior, not just a screen, forced a different kind of testing — whether an app feels good matters less than watching whether someone actually gets out of bed. That shifted how I think about product validation: fewer surveys, more direct observation of real behavior.",
     },
   },
   {
@@ -205,18 +213,21 @@ export const projects: Project[] = [
     links: [],
     caseStudy: {
       problem:
-        "Schools in Nepal lacked access to robotics equipment and technical curriculum, and one-time donations rarely translate into programs that last beyond the initial gift.",
+        "Growing up visiting Nepal, I often showed my EV3 robot to local friends whose schools lacked STEM resources — their wide-eyed curiosity tempered by having no way to act on it. That memory stayed with me and became Rookie Robotics: schools in Nepal lacked access to robotics equipment and technical curriculum, and one-time donations rarely translate into programs that last beyond the initial gift.",
       role: "Founder — fundraising, curriculum, logistics, and long-term program design.",
-      team: EDIT_PLACEHOLDER,
+      team: "Founder-led — partnered with Tri-Valley Robotics and FiSec Global Inc. for funding support, and worked directly with school administrators and instructors in Damak, Nepal to run the program locally.",
       process:
         "Raised funds and robotics equipment, then worked directly with schools to deploy equipment, train instructors, and build curriculum designed to keep programs running independently after launch.",
       technicalApproach:
         "Combined equipment sourcing and logistics with a structured curriculum built for sustained use by local instructors rather than one-off workshops.",
-      decisions: EDIT_PLACEHOLDER,
-      challenges: EDIT_PLACEHOLDER,
+      decisions:
+        "Built a full curriculum from scratch and sourced LEGO SPIKE kits rather than adapting an existing program, and personally contributed $4,000 toward the initial launch. When two schools asked to add fifty more students just months before the program started, chose to expand the program to meet that demand rather than turn students away or delay the launch.",
+      challenges:
+        "A few months before launch, two of the schools asked to add fifty more students than originally planned — a request I couldn't turn down, but with no time left to run additional fundraisers. I went back to organizations that had supported the program before, and after several meetings with Tri-Valley Robotics and FiSec Global Inc., secured $1,000 toward the roughly $1,600 gap. I covered the rest by picking up extra shifts at work, closing the gap in time to buy the additional kits and secure the remaining resources.",
       results:
         "Raised and deployed more than $5,000 in robotics equipment, established permanent programs at four schools, and received the Girl Scouts Gold Award for the project.",
-      reflection: EDIT_PLACEHOLDER,
+      reflection:
+        "Every extra shift was worth it the moment I taught the kickoff workshop and watched the first batch of students design and code their first robots — their curiosity turning into confidence in real time. The schools have kept their programs running since, and are preparing to compete this year.",
     },
   },
   {

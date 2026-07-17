@@ -9,8 +9,7 @@ export function SelectedWork() {
       <div className="container-edit">
         <SectionHeading
           eyebrow="The Work"
-          title="Four projects, four different ways I've turned an idea into something real."
-          description="A concise selection spanning product, research, hardware, and community-scale programs — each with a full case study if you want to go deeper."
+          title="Projects that show how I turn ideas into something people can use, test, and build on."
           accent="cobalt"
         />
 
