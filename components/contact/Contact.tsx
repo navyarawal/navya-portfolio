@@ -32,11 +32,8 @@ export function Contact() {
                 ambitious?
               </h2>
               <p className="text-lg text-ink-soft max-w-xl leading-relaxed">
-                I&apos;m up for conversations about technical opportunities, AI
-                and data projects, early-stage startups, research
-                collaborations, product experimentation, and mission-driven
-                technology. I&apos;m always interested in thoughtful people,
-                difficult problems, and ideas worth building.
+                I&apos;m always interested in thoughtful people, difficult
+                problems, and ideas worth building.
               </p>
 
               <div className="flex flex-wrap items-center gap-4 pt-2">
