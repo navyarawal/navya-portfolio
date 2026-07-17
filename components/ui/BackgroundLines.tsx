@@ -140,10 +140,10 @@ export function BackgroundLines() {
 
   if (size.width === 0 || size.height === 0) return null;
 
-  const architectural = buildArchitecturalPath(52, size.height);
-  const flowing = buildFlowingPath(92, size.height);
-  const orbital = buildOrbitalPath(134, size.height);
-  const zigzag = buildZigzagPath(178, size.height);
+  const architectural = buildArchitecturalPath(size.width - 52, size.height);
+  const flowing = buildFlowingPath(size.width - 92, size.height);
+  const orbital = buildOrbitalPath(size.width - 134, size.height);
+  const zigzag = buildZigzagPath(size.width - 178, size.height);
 
   return (
     // No z-index: rendering this before the page content in the DOM is
