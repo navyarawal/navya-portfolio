@@ -17,7 +17,7 @@ const dotClass: Record<"cobalt" | "red" | "gold" | "green", string> = {
 
 export function Capabilities() {
   return (
-    <section id="capabilities" className="py-16 sm:py-20 scroll-mt-24">
+    <section id="capabilities" className="py-12 sm:py-16 scroll-mt-24">
       <div className="container-edit">
         <SectionHeading
           eyebrow="Capabilities"
@@ -26,19 +26,19 @@ export function Capabilities() {
           accent="gold"
         />
 
-        <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
+        <div className="mt-7 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2.5">
           {capabilityGroups.map((group, i) => {
             const accent = accentCycle[i % accentCycle.length];
             return (
-              <div key={group.id} className="bg-tint rounded-2xl p-5 flex flex-col gap-3">
-                <div className={`h-2 w-2 rounded-full ${dotClass[accent]}`} aria-hidden="true" />
-                <h3 className="text-lg font-extrabold leading-tight">{group.title}</h3>
+              <div key={group.id} className="bg-tint rounded-2xl p-4 flex flex-col gap-2">
+                <div className={`h-1.5 w-1.5 rounded-full ${dotClass[accent]}`} aria-hidden="true" />
+                <h3 className="text-base font-extrabold leading-tight">{group.title}</h3>
                 <p className="text-xs text-ink-soft leading-relaxed">{group.description}</p>
-                <ul className="flex flex-wrap gap-1.5 mt-1">
+                <ul className="flex flex-wrap gap-1.5 mt-0.5">
                   {group.items.map((item) => (
                     <li
                       key={item}
-                      className="text-[10px] font-semibold uppercase tracking-wide px-2.5 py-1 rounded-full bg-surface"
+                      className="text-[10px] font-semibold uppercase tracking-wide px-2 py-1 rounded-full bg-surface"
                     >
                       {item}
                     </li>
@@ -47,8 +47,8 @@ export function Capabilities() {
               </div>
             );
           })}
-          <div className="bg-green-tint rounded-2xl p-5 flex flex-col justify-between gap-4">
-            <span className="text-4xl font-extrabold text-green/30" aria-hidden="true">
+          <div className="bg-green-tint rounded-2xl p-4 flex flex-col justify-between gap-3">
+            <span className="text-3xl font-extrabold text-green/30" aria-hidden="true">
               +
             </span>
             <p className="text-sm font-semibold text-ink leading-snug">

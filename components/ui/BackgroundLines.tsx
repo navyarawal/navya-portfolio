@@ -111,10 +111,21 @@ export function BackgroundLines() {
   const frame = useRef<number | null>(null);
 
   useEffect(() => {
+    // Measure the page's own content wrapper (#page-content in page.tsx),
+    // never document.documentElement/body. This SVG is an absolutely
+    // positioned sibling of that wrapper, so its rendered height still
+    // counts toward document.documentElement.scrollHeight — measuring the
+    // document would mean measuring a height that partly includes this
+    // component's own last render, a feedback loop that can latch onto an
+    // inflated value across a resize sequence and leave dead space below
+    // the page's last section.
+    const content = document.getElementById("page-content");
+    if (!content) return;
+
     const measure = () => {
       setSize({
-        width: document.documentElement.scrollWidth,
-        height: document.documentElement.scrollHeight,
+        width: content.scrollWidth,
+        height: content.scrollHeight,
       });
     };
 
@@ -128,7 +139,7 @@ export function BackgroundLines() {
     window.addEventListener("resize", scheduleMeasure);
 
     const observer = new ResizeObserver(scheduleMeasure);
-    observer.observe(document.body);
+    observer.observe(content);
 
     return () => {
       window.removeEventListener("load", scheduleMeasure);
@@ -146,14 +157,17 @@ export function BackgroundLines() {
   const zigzag = buildZigzagPath(size.width - 178, size.height);
 
   return (
-    // No z-index: rendering this before the page content in the DOM is
-    // what keeps it behind every section's opaque card background — an
-    // explicit z-index would pull it out of that natural paint order.
+    // -z-10 (inside the page root's `isolate` stacking context) is required,
+    // not optional: a plain position:absolute element with no z-index still
+    // paints *after* normal-flow, non-positioned siblings, regardless of DOM
+    // order — so without this, the lines show through any card that isn't
+    // itself positioned (e.g. plain bg-tint divs), like the Capabilities
+    // cards. A genuine negative z-index is what keeps it behind everything.
     <svg
       aria-hidden="true"
       // Hidden below lg: at narrow widths the lanes (x ≈ 50-195px) run
       // straight through the hero text instead of sitting in the margins.
-      className="absolute inset-0 pointer-events-none hidden lg:block"
+      className="absolute inset-0 -z-10 pointer-events-none hidden lg:block"
       width={size.width}
       height={size.height}
       viewBox={`0 0 ${size.width} ${size.height}`}

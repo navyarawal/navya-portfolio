@@ -10,18 +10,23 @@ import { HashScroll } from "@/components/HashScroll";
 
 export default function Home() {
   return (
-    <div className="relative">
+    <div className="relative isolate">
       <HashScroll />
       <BackgroundLines />
-      <Nav />
-      <main id="main">
-        <Hero />
-        <SelectedWork />
-        <Leadership />
-        <Experience />
-        <Capabilities />
-      </main>
-      <Contact />
+      {/* BackgroundLines measures this wrapper's own height, not the
+          document's — its absolutely-positioned SVG must never be part of
+          what it measures itself against (see BackgroundLines.tsx). */}
+      <div id="page-content">
+        <Nav />
+        <main id="main">
+          <Hero />
+          <SelectedWork />
+          <Leadership />
+          <Experience />
+          <Capabilities />
+        </main>
+        <Contact />
+      </div>
     </div>
   );
 }
