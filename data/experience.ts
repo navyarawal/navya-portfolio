@@ -44,11 +44,8 @@ export const experience: ExperienceEntry[] = [
     role: "Data Analytics Consulting Intern",
     dates: "June 2023 — June 2024",
     summary:
-      "Developed pricing-optimization and product-performance dashboards for multiple clients, translating large datasets into decisions that shaped pricing and product placement.",
-    highlights: [
-      "Developed pricing-optimization and product-performance dashboards for multiple clients using data-visualization tools",
-      "Analyzed large datasets to identify trends and deliver actionable insights that improved pricing strategies and product placement",
-    ],
+      "Developed pricing-optimization and product-performance dashboards for multiple clients, translating large datasets into decisions that shaped pricing and product placement. Analyzed large datasets to identify trends and deliver actionable insights that improved pricing strategies and product placement.",
+    highlights: [],
     capabilities: [
       "Analytics consulting",
       "Data visualization",
@@ -63,13 +60,8 @@ export const experience: ExperienceEntry[] = [
     role: "Lead Coach & Curriculum Developer",
     dates: "December 2022 — September 2025",
     summary:
-      "Coached competitive robotics teams and taught over 100 students robotics, coding, and engineering design, while building the standardized curriculum used across programs.",
-    highlights: [
-      "Coached two competitive VEX teams",
-      "Taught more than 100 students ages 4–14 in robotics, coding, and engineering design",
-      "Designed standardized curriculum used across multiple programs",
-      "Managed instructor scheduling and coordinated team operations",
-    ],
+      "Coached several competitive VEX teams and taught more than 100 students ages 4–14 in robotics, coding, and engineering design. Designed standardized curriculum used across multiple programs while managing instructor scheduling and coordinating team operations.",
+    highlights: [],
     capabilities: [
       "Coaching",
       "Curriculum development",
