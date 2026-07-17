@@ -33,7 +33,11 @@
       "Bash(mv 'images/osteosarcoma-cnn/OsteoResearch \\(2\\).pdf' documents/osteosarcoma-cnn/osteosarcoma-research-paper.pdf)",
       "Bash(rm -f .DS_Store)",
       "Bash(mv IMG_2749.jpg nfc-tags.jpg)",
-      "Bash(mv IMG_2750.jpg campus-launch.jpg)"
+      "Bash(mv IMG_2750.jpg campus-launch.jpg)",
+      "Bash(file public/resume/navya-rawal-resume.pdf public/images/experience/magikid/*.JPG)",
+      "Bash(rm -f ../.DS_Store .DS_Store)",
+      "Bash(mv IMG_2764.JPG 3d-printer-demo.jpg)",
+      "Bash(mv IMG_2765.JPG vex-coaching-session.jpg)"
     ]
   }
 }

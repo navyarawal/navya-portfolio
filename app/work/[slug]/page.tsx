@@ -7,7 +7,7 @@ import { Contact } from "@/components/contact/Contact";
 import { Gallery } from "@/components/ui/Gallery";
 import { PdfCard } from "@/components/ui/PdfCard";
 import { CaseStudySection } from "@/components/work/CaseStudySection";
-import { projects, getProjectBySlug, type Accent } from "@/data/projects";
+import { featuredProjects, getProjectBySlug, type Accent } from "@/data/projects";
 import { site } from "@/data/site";
 
 const accentText: Record<Accent, string> = {
@@ -25,7 +25,9 @@ const accentTint: Record<Accent, string> = {
 };
 
 export function generateStaticParams() {
-  return projects.map((p) => ({ slug: p.slug }));
+  // Only the featured projects get a full case study page — the
+  // "Additional Experiments & Projects" cards link nowhere.
+  return featuredProjects.map((p) => ({ slug: p.slug }));
 }
 
 export async function generateMetadata({
@@ -55,10 +57,12 @@ export default async function CaseStudyPage({
 }) {
   const { slug } = await params;
   const project = getProjectBySlug(slug);
-  if (!project) notFound();
+  // Non-featured projects (Additional Experiments & Projects) don't get a
+  // case study page — treat those slugs as not found too.
+  if (!project || !project.featured) notFound();
 
-  const currentPos = projects.findIndex((p) => p.slug === slug);
-  const next = projects[(currentPos + 1) % projects.length];
+  const currentPos = featuredProjects.findIndex((p) => p.slug === slug);
+  const next = featuredProjects[(currentPos + 1) % featuredProjects.length];
 
   return (
     <>

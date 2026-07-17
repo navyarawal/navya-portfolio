@@ -77,16 +77,13 @@ export const experience: ExperienceEntry[] = [
       "STEM education",
     ],
     images: [
-      // EDIT: add coaching / classroom photos to /public/images/experience/magikid/
       {
-        src: "/images/experience/magikid/coaching-1.jpg",
-        alt: "Magikid Robotics coaching session placeholder",
-        isPlaceholder: true,
+        src: "/images/experience/magikid/3d-printer-demo.jpg",
+        alt: "Navya showing students a 3D printer at Magikid Robotics",
       },
       {
-        src: "/images/experience/magikid/classroom-1.jpg",
-        alt: "Magikid Robotics classroom placeholder",
-        isPlaceholder: true,
+        src: "/images/experience/magikid/vex-coaching-session.jpg",
+        alt: "Navya coaching students building a VEX robot on a competition table",
       },
     ],
   },

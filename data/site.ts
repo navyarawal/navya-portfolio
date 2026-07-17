@@ -12,7 +12,7 @@ export const site = {
     "I'm a Math and Computer Science student at UCLA working across data engineering, artificial intelligence, robotics, entrepreneurship, research, and community impact.",
   url: "https://navyarawal.com", // EDIT: replace with final deployed domain
   email: "navyarawal@g.ucla.edu",
-  linkedin: "https://www.linkedin.com/in/navyarawal", // EDIT: confirm final LinkedIn URL
+  linkedin: "https://www.linkedin.com/in/navya-rawal/",
   // EDIT: drop the final résumé PDF at public/resume/navya-rawal-resume.pdf
   resumeHref: "/resume/navya-rawal-resume.pdf",
   // EDIT: drop a photo of yourself at public/images/navya-photo.jpg — the
