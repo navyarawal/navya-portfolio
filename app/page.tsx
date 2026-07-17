@@ -6,10 +6,12 @@ import { Leadership } from "@/components/leadership/Leadership";
 import { Capabilities } from "@/components/capabilities/Capabilities";
 import { Contact } from "@/components/contact/Contact";
 import { BackgroundLines } from "@/components/ui/BackgroundLines";
+import { HashScroll } from "@/components/HashScroll";
 
 export default function Home() {
   return (
     <div className="relative">
+      <HashScroll />
       <BackgroundLines />
       <Nav />
       <main id="main">

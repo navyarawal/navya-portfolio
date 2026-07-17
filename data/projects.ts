@@ -12,6 +12,9 @@ export interface GalleryImage {
   alt: string;
   caption?: string;
   isPlaceholder?: boolean;
+  // Set to open a PDF (e.g. a paper or poster) in a new tab instead of the
+  // lightbox — `src` should be a thumbnail image of the document.
+  documentHref?: string;
 }
 
 export interface ProjectDocument {
@@ -141,12 +144,10 @@ export const projects: Project[] = [
       "Healthcare AI applications",
     ],
     gallery: [
-      // EDIT: add selected result figures / diagrams to
-      // /public/images/osteosarcoma-cnn/
       {
-        src: "/images/osteosarcoma-cnn/placeholder-1.svg",
-        alt: "Osteosarcoma CNN diagram placeholder",
-        isPlaceholder: true,
+        src: "/images/osteosarcoma-cnn/paper-thumbnail.jpg",
+        alt: "Research paper: Efficient Diagnosis of Osteosarcoma in Adolescents With Convolutional Neural Network for Histopathology Images",
+        documentHref: "/documents/osteosarcoma-cnn/osteosarcoma-research-paper.pdf",
       },
     ],
     documents: [
@@ -243,7 +244,7 @@ export const projects: Project[] = [
     featured: true,
     order: 4,
     summary:
-      "A three-tier wastewater filtration system that removes phosphorus using duckweed, biochar, and bacteria — first place at CCCSEF and the UC Berkeley Bioengineering Competition.",
+      "A three-tier wastewater filtration system that removes phosphorus using duckweed, biochar, and a phosphate-binding protein — first place at CCCSEF and the UC Berkeley Bioengineering Competition.",
     results: [
       "1st place — CCCSEF",
       "1st place — UC Berkeley Bioengineering Competition",
@@ -265,6 +266,11 @@ export const projects: Project[] = [
         src: "/images/phosphobuddy/berkeley-competition-1st-place.jpg",
         alt: "Team accepting the 1st place award on stage at the UC Berkeley Bioengineering Competition",
       },
+      {
+        src: "/images/phosphobuddy/poster-thumbnail.jpg",
+        alt: "Research poster: A Novel PstS Protein-Enabled 3-Tier Biofiltration Device for Wastewater Phosphorus Capture and Reuse",
+        documentHref: "/documents/phosphobuddy/research-week-presentation-poster.pdf",
+      },
     ],
     documents: [
       {
@@ -275,18 +281,21 @@ export const projects: Project[] = [
     links: [],
     caseStudy: {
       problem:
-        "Excess phosphorus in wastewater drives harmful algal blooms and ecosystem damage — conventional filtration is often costly or chemically intensive.",
+        "Outdated wastewater treatment and agricultural runoff are a major source of phosphorus pollution — in one 2022 estimate, 37 treatment plants discharged over 54,000 kg of pollutants into local waterways daily. That excess phosphorus fuels harmful algal blooms that damage marine life, local economies, and water quality, and conventional removal methods are often costly or chemically intensive.",
       role: "Lead Hardware Developer — system design, prototyping, and testing.",
       team: "Team Dougherty B — Aarush De, Navya Rawal, Richa Tiwari, and Diya Rajaram, mentored by Darrence Tran and coached by Luis Huertas.",
       process:
-        "Designed a three-tier biological filtration system combining duckweed, biochar, and bacteria, then built and tested prototypes to measure phosphorus removal before presenting the system in competition.",
+        "Designed a three-tier biological filtration system — duckweed, biochar, then a phosphate-binding protein immobilized on resin beads — housed in swappable, 3D-printed gravity columns, then built and benchmarked prototypes against each layer individually before presenting the system in competition.",
       technicalApproach:
-        "Layered filtration architecture pairing biochar's adsorption properties with duckweed and bacterial phosphorus uptake across three sequential treatment tiers.",
-      decisions: EDIT_PLACEHOLDER,
-      challenges: EDIT_PLACEHOLDER,
+        "Each layer targets phosphorus differently: duckweed (Lemna minor) absorbs and stores it directly, biochar adsorbs it through surface interactions, and a PstS protein — expressed in E. coli and immobilized on Nickel-NTA resin beads — binds phosphate ions with high affinity. The three layers sit in series inside a 3D-printed gravity column, separated by filter paper, with the surface area and layer order adjustable for different conditions.",
+      decisions:
+        "Chose a modular, swappable-layer column design over a fixed system, so the surface-area ratio and layer order could be tuned per test rather than rebuilt from scratch. Benchmarked each layer individually against the combined 3-tier system to confirm the layers work better together than any one alone, using a UV/VIS colorimetric test to measure phosphorus reduction.",
+      challenges:
+        "Four technical problems drove most of the iteration: figuring out how to reuse captured phosphorus, since the PstS protein releases it again when pH changes; wastewater chemistry interfering with the filter — including duckweed not getting enough nutrients; finding the layer order that maximized removal while keeping the resin beads accessible; and optimizing the column's size and shape for both filtration performance and reusability.",
       results:
-        "Won first place at CCCSEF and the UC Berkeley Bioengineering Competition, securing approximately $3,000 in laboratory equipment and more than $1,000 in grants.",
-      reflection: EDIT_PLACEHOLDER,
+        "Won first place at CCCSEF and the UC Berkeley Bioengineering Competition, securing approximately $3,000 in laboratory equipment and more than $1,000 in grants. Benchmarking showed the combined three-layer system removed meaningfully more phosphorus than any single layer tested alone.",
+      reflection:
+        "Presenting at competition pushed the project past 'does it work' into 'should it work this way' — the poster's own ethical review flagged real risks worth taking seriously: PstS protein leaching into waterways, duckweed escaping and behaving as an invasive species, metal waste from the resin, and the cost of frequent replacement limiting accessibility for the rural communities that need this most. Designing for reuse and safety, not just removal efficiency, became as much a part of the project as the filtration itself.",
     },
   },
   {

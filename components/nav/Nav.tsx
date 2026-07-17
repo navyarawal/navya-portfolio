@@ -6,7 +6,7 @@ import { Menu, X, ArrowUpRight } from "lucide-react";
 import { navLinks, site } from "@/data/site";
 import { useScrollSpy, useScrollProgress } from "@/lib/hooks";
 
-const sectionIds = navLinks.map((l) => l.href.replace("#", ""));
+const sectionIds = navLinks.map((l) => l.href.split("#")[1]);
 
 export function Nav() {
   const [open, setOpen] = useState(false);
@@ -27,7 +27,7 @@ export function Nav() {
         >
           <div className="flex items-center justify-between h-16 px-3 sm:px-5">
             <Link
-              href="#home"
+              href="/#home"
               className="font-extrabold text-lg tracking-tight flex items-center gap-2 pl-2"
             >
               <span
@@ -41,7 +41,7 @@ export function Nav() {
 
             <ul className="hidden lg:flex items-center gap-1">
               {navLinks.map((link) => {
-                const id = link.href.replace("#", "");
+                const id = link.href.split("#")[1];
                 const isActive = active === id;
                 return (
                   <li key={link.href}>

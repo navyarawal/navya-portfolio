@@ -21,11 +21,14 @@ export const site = {
   location: "San Francisco, California",
 };
 
+// Prefixed with "/" so these still work from other pages (e.g. a case
+// study route) — same-page clicks on the homepage just scroll, since a
+// same-document fragment link never triggers a full navigation.
 export const navLinks = [
-  { label: "Home", href: "#home" },
-  { label: "The Work", href: "#work" },
-  { label: "Leadership & Impact", href: "#leadership" },
-  { label: "Experience", href: "#experience" },
-  { label: "Capabilities", href: "#capabilities" },
-  { label: "Contact", href: "#contact" },
+  { label: "Home", href: "/#home" },
+  { label: "The Work", href: "/#work" },
+  { label: "Leadership & Impact", href: "/#leadership" },
+  { label: "Experience", href: "/#experience" },
+  { label: "Capabilities", href: "/#capabilities" },
+  { label: "Contact", href: "/#contact" },
 ];

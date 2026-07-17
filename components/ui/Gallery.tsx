@@ -2,7 +2,7 @@
 
 import { useCallback, useEffect, useRef, useState } from "react";
 import Image from "next/image";
-import { ChevronLeft, ChevronRight, X, Expand } from "lucide-react";
+import { ChevronLeft, ChevronRight, X, Expand, FileText } from "lucide-react";
 import { PlaceholderArt } from "./PlaceholderArt";
 import type { GalleryItem, Accent } from "@/lib/types";
 
@@ -40,21 +40,16 @@ export function Gallery({
         ref={trackRef}
         className="flex gap-4 overflow-x-auto snap-x snap-mandatory scroll-smooth pb-1 [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"
       >
-        {items.map((item, i) => (
-          <button
-            key={item.src + i}
-            type="button"
-            ref={i === index ? triggerRef : undefined}
-            onClick={() => {
-              setIndex(i);
-              setLightboxOpen(true);
-            }}
-            className={`relative shrink-0 w-[78%] xs:w-[64%] sm:w-[48%] md:w-[38%] snap-start ${aspect} rounded-2xl overflow-hidden group focus-visible:outline-offset-4 shadow-soft`}
-            aria-label={`Open image ${i + 1} of ${items.length}: ${item.alt}`}
-          >
-            {item.isPlaceholder ? (
-              <PlaceholderArt seed={`${seedPrefix}-${i}`} accent={accent} label={item.alt} />
-            ) : (
+        {items.map((item, i) =>
+          item.documentHref ? (
+            <a
+              key={item.src + i}
+              href={item.documentHref}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`relative shrink-0 w-[78%] xs:w-[64%] sm:w-[48%] md:w-[38%] snap-start ${aspect} rounded-2xl overflow-hidden group focus-visible:outline-offset-4 shadow-soft`}
+              aria-label={`Open PDF: ${item.alt}`}
+            >
               <Image
                 src={item.src}
                 alt={item.alt}
@@ -62,12 +57,41 @@ export function Gallery({
                 className="object-cover"
                 sizes="(max-width: 768px) 80vw, 40vw"
               />
-            )}
-            <span className="absolute top-2.5 right-2.5 bg-ink/80 text-paper p-1.5 rounded-full opacity-0 group-hover:opacity-100 group-focus-visible:opacity-100 transition-opacity">
-              <Expand size={14} aria-hidden="true" />
-            </span>
-          </button>
-        ))}
+              <span className="absolute inset-0 bg-ink/0 group-hover:bg-ink/20 transition-colors" />
+              <span className="absolute top-2.5 right-2.5 flex items-center gap-1 bg-ink/80 text-paper px-2.5 py-1.5 rounded-full text-xs font-semibold">
+                <FileText size={14} aria-hidden="true" />
+                PDF
+              </span>
+            </a>
+          ) : (
+            <button
+              key={item.src + i}
+              type="button"
+              ref={i === index ? triggerRef : undefined}
+              onClick={() => {
+                setIndex(i);
+                setLightboxOpen(true);
+              }}
+              className={`relative shrink-0 w-[78%] xs:w-[64%] sm:w-[48%] md:w-[38%] snap-start ${aspect} rounded-2xl overflow-hidden group focus-visible:outline-offset-4 shadow-soft`}
+              aria-label={`Open image ${i + 1} of ${items.length}: ${item.alt}`}
+            >
+              {item.isPlaceholder ? (
+                <PlaceholderArt seed={`${seedPrefix}-${i}`} accent={accent} label={item.alt} />
+              ) : (
+                <Image
+                  src={item.src}
+                  alt={item.alt}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 80vw, 40vw"
+                />
+              )}
+              <span className="absolute top-2.5 right-2.5 bg-ink/80 text-paper p-1.5 rounded-full opacity-0 group-hover:opacity-100 group-focus-visible:opacity-100 transition-opacity">
+                <Expand size={14} aria-hidden="true" />
+              </span>
+            </button>
+          )
+        )}
       </div>
 
       {items.length > 1 ? (

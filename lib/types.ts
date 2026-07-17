@@ -5,6 +5,7 @@ export interface GalleryItem {
   alt: string;
   caption?: string;
   isPlaceholder?: boolean;
+  documentHref?: string;
 }
 
 export type { Accent };
